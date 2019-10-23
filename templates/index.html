@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Musician</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Theme CSS - Includes Bootstrap -->
+    <link href="{{url_for('static', filename='main.css')}}" rel="stylesheet">
+    <style type="text/css"></style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Gary Simon</a>
+        <nav>
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <section class="hero">
+            <div class="clipper">
+                <h1 class="main-title">Rock on!</h1>
+            </div>
+            <div class="anim-panel">
+                <a href="#" class="read-btn primary">Get Famous</a>
+            </div>
+        </section>
+        <section class="sidebar">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Featured</h1>
+                </div>
+                <div class="anim-panel">
+                    <p>Dictumst augue cras lacinia magnis ornare dapibus justo nisl, natoque a habitant morbi vitae in donec. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    <a href="#" class="read-btn secondary">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Subscribe </h1>
+                </div>
+                <div class="anim-panel">
+                    <p>Get the latest updates about this website and stuff.</p>
+                    <input type="text" name="email" placeholder="Email Address">
+                    <button class="cta" type="submit">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="{{url_for('.static', filename='main.js')}}"></script>
+</body>
+</html>

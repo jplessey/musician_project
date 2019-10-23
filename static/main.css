@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap');
+
+body, html {
+	margin: 0;
+}
+
+
+body {
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	display: none;
+}
+
+
+header {
+	position: absolute;
+	padding: 1em;
+	z-index: 20;
+	display: flex;
+	justify-content: space-between;
+	width: calc(100% - 2em);
+	/* background: white; */
+	background: none;
+}
+
+
+.logo {
+	text-decoration: none;
+	color: white;
+	font-weight: bolder;
+	text-transform: uppercase;
+
+}
+
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+nav li a {
+	text-decoration: none;
+	padding: .5em;
+	color: white;
+
+}
+
+
+section {
+	padding: 3em;
+}
+
+
+h1, h2, .read-btn {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.main-title {
+	color: yellow;
+	font-family: 'Mansalva', cursive;
+	display: none;
+	-webkit-text-stroke: 1px black;
+}
+
+
+h1 {
+	font-size: 2.6rem;
+}
+
+
+h2 {
+	font-size: 1.4rem;
+}
+
+
+.read-btn {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	background: url('/static/images/Arrow.svg') no-repeat;
+	background-size: 8px;
+	background-position: 0 1px;
+	padding-left: 1em;
+	border-radius: 0 2em 2em 0;
+}
+
+
+.primary {
+	padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+	background-position: 3em;
+	/*border: 2px solid white;*/
+	display: inline-block;
+	margin-top: 3em;
+	margin-left: -3em;
+	background-color: yellow;
+
+}
+
+
+.clipper {
+	overflow: hidden;
+}
+
+
+.wrapper {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+
+.hero {
+	padding-top: 7em;
+	background: url('/static/images/Hero.jpg');
+	background-size: cover;
+}
+
+
+.clipper {
+	floa: left;
+}
+
+.sidebar, .subscribe {
+	font-size: .9rem;
+	line-height: 1.6rem;
+}
+
+.sidebar {
+	 background-color: yellow;
+}
+
+.secondary {
+	margin-top: 2em;
+	display: block;
+	background-position: 0 .35em;
+}
+
+
+.subscribe input {
+	width: calc(100% - 2.6em);
+	padding: 1em;
+	font-family: 'Montserrat';
+	margin-bottom: 1em;
+}
+
+.subscribe button {
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding: 1em;
+	border: none;
+	font-family: 'Montserrat';
+	border-radius: 1em;
+	margin: 0 auto;
+}
+
+
+.cta:hover {
+	background-color: green;
+}
+
+
+@media only screen and (min-width: 768px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+
+@media only screen and (min-width: 1020px) {
+
+	.wrapper {
+		grid-template-columns: 70% auto;
+		grid-template-rows: 60% auto;
+		grid-template-areas:
+				"hero featured"
+				"hero subscribe";
+		height: 100vh;
+	}
+
+	.hero {
+		grid-area: hero;
+		padding-top: 0;
+	}
+
+	section {
+		display: grid;
+		grid-template-rows: auto;
+		align-items: center;
+	}
+
+	nav {
+		padding-right: 2%;
+	}
+
+	nav li a {
+		color: black;
+	}
+
+	.main-title {
+	display: inline-block;
+
+	}
+
+}

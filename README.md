@@ -14,9 +14,9 @@ It has also been reformatted as a Flask application.
 
 
 ## Technologies used:
-* Flask
-* SQLAlchemy
 * HTML, CSS and Sass.
+* Flask
+
 
 
 ## Requirements: 

@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Musician</title>
+    <title>J&amp;P Guitars</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Theme CSS - Includes Bootstrap -->
-    <link href="{{url_for('static', filename='main.css')}}" rel="stylesheet">
-    <style type="text/css"></style>
+    <link href="{{url_for('.static', filename='main.css')}}" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <a href="#" class="logo">Gary Simon</a>
-        <nav>
-            <ul>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </nav>
+        <a href="#" class="logo_1">J&amp;P</a>
+        <a href="#" class="logo_2">J&amp;P Guitars</a>
     </header>
     <div class="wrapper">
         <section class="hero">
-            <div class="clipper">
-                <h1 class="main-title">Rock on!</h1>
-            </div>
             <div class="anim-panel">
                 <a href="#" class="read-btn primary">Get Famous</a>
             </div>
+            <p id="author">Image by<a
+                    href="https://pixabay.com/users/Nadine_Em-2242979/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2708190">Nadine_Em</a>
+                from <a
+                    href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2708190">Pixabay</a>
+            </p>
         </section>
         <section class="sidebar">
             <div class="inner">
                 <div class="clipper">
-                    <h2>Featured</h1>
+                    <h2>Featured</h2>
                 </div>
                 <div class="anim-panel">
-                    <p>Dictumst augue cras lacinia magnis ornare dapibus justo nisl, natoque a habitant morbi vitae in donec. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    <a href="#" class="read-btn secondary">Read More</a>
+                    <p>J&amp;P has created a variety of guitars just for you, who likes to rock! Electric, Acoustic, Basses
+                        and many more.</p>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <p id="subscribed">{{ message }}</p>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
                 </div>
             </div>
         </section>
         <section class="subscribe">
             <div class="inner">
                 <div class="clipper">
-                    <h2>Subscribe </h1>
+                    <h2>Subscribe </h2>
                 </div>
                 <div class="anim-panel">
-                    <p>Get the latest updates about this website and stuff.</p>
-                    <input type="text" name="email" placeholder="Email Address">
-                    <button class="cta" type="submit">Subscribe Now</button>
+                    <p>Get the latest news, events and information about our line of guitars.</p>
+                    <form method="post">
+                        <input type="email" name="email" placeholder="Email Address">
+                        <button class="cta" type="submit">Subscribe Now</button>
+                    </form>
                 </div>
             </div>
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="{{url_for('.static', filename='main.js')}}"></script>
+    <script src="{{url_for('.static',filename='main.js')}}"></script>
 </body>
+
 </html>

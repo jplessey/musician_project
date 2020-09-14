@@ -2,3 +2,6 @@
 *Pipfile.lock
 music/
 .vscode/
+images/full_size.png
+images/mobile_view.png
+.gitignore

@@ -9,28 +9,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
             opacity: 0,
             scale: .5,
             ease: Power2.easeOut
-        }, 0.2)
+        }, 0.2);
 
         tl.staggerFrom('h1, h2', .5, {
             opacity: 0,
             y: -40,
             ease: Power2.easeInOut
-        }, 0.2, "-=2")
+        }, 0.2, "-=2");
 
         tl.staggerFrom('.anim-panel', 1, {
             opacity: 0,
             y: -40,
             ease: Power2.easeInOut
-        }, 0.2, "-=1.5")
+        }, 0.2, "-=1.5");
 
     }, false);
 });
-
-
-
-const butn = document.querySelector('.cta');
-
-butn.addEventListener('click', function(){ alert("Hello World!"); });
-// alert("Bienvenidoss");
-
-// document.getElementById("myBtn").addEventListener("click", alert("Helooo"));

@@ -3,11 +3,11 @@
 
 Full size view
 
-<img src="images/full_size.png">
+<img src="images/full_size.jpg">
 
 Mobile view
 
-<img src="images/mobile_view.png">
+<img src="images/mobile_view.jpg">
 
 This is my own version of the "Create a Modern Web Design from Scratch" tutorial from DesignCourse. 
 It has also been reformatted as a Flask application.

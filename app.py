@@ -23,7 +23,7 @@ body_html = """
 <html lang="en">
     <body>
         <h1 style="color:SlateGray;">J&P Guitars. You're now subscribed to our newsletter!</h1>
-        <img src="https://drive.google.com/uc?export=view&id=1D_BbH3Z4_D-CKt2SU05Jf_f7TwcKwFkM" alt="Electric Guitar">
+        <img src="">
     </body>    
 </html>
 """
@@ -38,7 +38,7 @@ def home():
 def send_email():
     if request.method == 'POST' and request.form['email']:
         email = request.form['email']
-        msg = Message(sender="ele.pe.arq@gmail.com")
+        msg = Message(sender="")
         msg.recipients = [f"{email}"]
         msg.body = "J&P Guitars. Newsletter"
         msg.html = body_html
